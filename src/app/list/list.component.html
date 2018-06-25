@@ -1,0 +1,43 @@
+<h1 style="color: orangered">
+  list component
+</h1>
+
+<p>list of object:</p>
+<ul>
+  <li>
+    {{obj.firstname}}
+  </li>
+  <li>
+    {{obj.lastname}}
+  </li>
+  <li>
+    {{obj.age}}
+  </li>
+  <li>
+    {{obj.address}}
+  </li>
+</ul>
+<p>list of arrays:</p>
+<ul>
+  <li *ngFor="let element of list"
+      [class.selected]="element === selectedHero"
+      (click)="onSelect(element)">
+    <span class="badge">{{element.id}}</span>{{element.name}}
+  </li>
+</ul>
+
+
+<div *ngIf="selectedHero">
+
+  <h2>{{ selectedHero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name">
+    </label>
+  </div>
+
+</div>
+
+
+<app-app-hero-detail [hero]="selectedHero"></app-app-hero-detail>
