@@ -1,16 +1,127 @@
-<div class="container">
+<!--<div class="container">-->
 
-  <h4>Here is the root component</h4>
-  <p>Input field</p>
-  <input type="text" [(ngModel)]="input">
-  <p>Output field</p>
-  <p>{{input}}</p>
-  <hr>
-  <app-servers></app-servers>
-  <router-
+  <!--<h4>Here is the root component</h4>-->
+  <!--<p>Input field</p>-->
+  <!--<input type="text" [(ngModel)]="input">-->
+  <!--<p>Output field</p>-->
+  <!--<p>{{input}}</p>-->
+  <!--<hr>-->
+  <!--<app-servers></app-servers>-->
 
+<!--</div>-->
+
+<div style="text-align: center">
+  <h1>Welcome to {{title}}</h1>
 </div>
 
+<mat-toolbar>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.facebook.com/">Facebook</a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.youtube.com/">Youtube</a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.angular.io/">Angular</a>
+  </mat-toolbar-row>
+</mat-toolbar>
 
+<!--<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">-->
+  <!--<div fxFlex="20%">-->
+    <!--<img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  <!--</div>-->
+  <!--<div fxFlex="20%">-->
+    <!--<img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/LTLE4QGRVQ.jpg">-->
+  <!--</div>-->
+  <!--<div fxFlex="20%">-->
+    <!--<img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/R926LU1YEA.jpg">-->
+  <!--</div>-->
+  <!--<div fxFlex="20%">-->
+    <!--<img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg">-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div>-->
+  <!--<img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  <!--<img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+<!--</div>-->
+
+<div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center" >
+  <mat-card class="card-picture">
+    <!--<img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+    <mat-card-title fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">1st Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+  <mat-card class="card-picture">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">2nd Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/R926LU1YEA.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+  <mat-card class="card-picture">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">3rd Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/LTLE4QGRVQ.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+  <mat-card class="card-picture" >
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">4th Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+  <mat-card class="card-picture" >
+    <!--<img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+    <mat-card-title fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">1st Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+  <mat-card class="card-picture">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">2nd Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/R926LU1YEA.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+  <mat-card class="card-picture">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">3rd Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/LTLE4QGRVQ.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+  <mat-card class="card-picture">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">4th Pic</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card>
+
+</div>
 
 
