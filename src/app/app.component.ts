@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title='Flex Layout App'
   input='';
+  id:any;
 
   pictures = [
     {id:1, caption: '1st image', img: 'https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg'},
@@ -23,6 +24,10 @@ export class AppComponent {
 
   openPicture(picture){
     window.open(picture.img);
+  }
+
+  deletePicture(picture){
+    alert("delete")
   }
 
 
