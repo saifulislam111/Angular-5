@@ -21,5 +21,10 @@ export class AppComponent {
   ];
 
 
+  openPicture(picture){
+    window.open(picture.img);
+  }
+
+
 
 }

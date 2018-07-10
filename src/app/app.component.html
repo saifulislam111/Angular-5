@@ -28,11 +28,9 @@
 
 
 
-<div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center center" >
+<div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center center" [ngStyle.xs]="{'font-size.px': 10, color: 'blue'}">
 
-
-
-  <mat-card *ngFor="let picture of pictures" class="card-picture" fxFlex="20%">
+  <mat-card *ngFor="let picture of pictures" class="card-picture" fxFlex="20%" (click)="openPicture(picture)">
     <mat-card-title fxLayout.xs="column" fxLayoutGap="5px">
       <span fxFlex="80%">{{picture.caption}}</span>
       <mat-icon fxFlex="10%">mode_edit</mat-icon>
