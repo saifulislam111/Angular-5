@@ -1,22 +1,6 @@
 <h1 style="color: orangered">
   list component
 </h1>
-
-<p>list of object:</p>
-<ul>
-  <li>
-    {{obj.firstname}}
-  </li>
-  <li>
-    {{obj.lastname}}
-  </li>
-  <li>
-    {{obj.age}}
-  </li>
-  <li>
-    {{obj.address}}
-  </li>
-</ul>
 <p>list of arrays:</p>
 <ul>
   <li *ngFor="let element of list"
@@ -36,8 +20,37 @@
       <input [(ngModel)]="selectedHero.name" placeholder="name">
     </label>
   </div>
-
 </div>
 
-
 <app-app-hero-detail [hero]="selectedHero"></app-app-hero-detail>
+
+
+
+<div style="text-align: center">
+  <h1>Welcome to {{title}}</h1>
+</div>
+
+<mat-toolbar>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.facebook.com/">Facebook</a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.youtube.com/">Youtube</a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.angular.io/">Angular</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center center" >
+
+  <mat-card *ngFor="let picture of pictures" class="card-picture" fxFlex="20%">
+    <mat-card-title fxLayout.xs="column" fxLayoutGap="5px">
+      <span fxFlex="80%">{{picture.caption}}</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image src={{picture.img}}>
+    <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
+  </mat-card >
+</div>
