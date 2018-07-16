@@ -1,15 +1,25 @@
-<h1>
-  app-hero-detail component!
-</h1>
+<h4>
+  child component!
+</h4>
 
-<div *ngIf="hero">
+<div>
 
   <h2>{{ hero.name | uppercase }} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
     <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
+      <!--<input [(ngModel)]="hero.caption" placeholder="name"/>-->
+      <span>{{hero.caption}}</span>
     </label>
   </div>
 
 </div>
+
+<!--<div>-->
+  <!--<ul>-->
+    <!--<li *ngFor="let image of hero">-->
+      <!--<div><span>id: </span>{{image.id}}</div>-->
+      <!--<div><span>id: </span>{{image.caption}}</div>-->
+    <!--</li>-->
+  <!--</ul>-->
+<!--</div>-->

@@ -1,17 +1,6 @@
-<div class="container">
-
-   <!--<app-flex-layout></app-flex-layout>-->
-  <app-servers></app-servers>
 
 
- </div>
-
-
-
-
-
-
-<!-- <div style="text-align: center">
+<div style="text-align: center">
   <h1>Welcome to {{title}}</h1>
 </div>
 
@@ -36,10 +25,15 @@
       <span fxFlex="80%">{{picture.caption}}</span>
       <mat-icon fxFlex="10%">mode_edit</mat-icon>
       <mat-icon fxFlex="10%" (click)="deletePicture(picture)" style="cursor: pointer">delete</mat-icon>
+      <mat-icon fxFlex="10%" (click)="addClick()" style="cursor: pointer">alarm</mat-icon>
     </mat-card-title>
     <img mat-card-image src={{picture.img}} (click)="openPicture(picture)">
   </mat-card >
 
-</div> -->
+</div>
+
+
+<!--<app-mock-service [image]="notify" ></app-mock-service>-->
+<app-mock-service [image]="selectedImage" ></app-mock-service>
 
 

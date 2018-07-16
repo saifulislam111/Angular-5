@@ -1,28 +1,23 @@
-<h1 style="color: orangered">
-  list component
-</h1>
-<p>list of arrays:</p>
-<ul>
-  <li *ngFor="let element of list"
-      [class.selected]="element === selectedHero"
-      (click)="onSelect(element)">
-    <span class="badge">{{element.id}}</span>{{element.name}}
-  </li>
-</ul>
+<!--<p>list of arrays:</p>-->
+<!--<ul>-->
+  <!--<li *ngFor="let element of list"-->
+      <!--[class.selected]="element === selectedHero"-->
+      <!--(click)="onSelect(element)">-->
+    <!--<span class="badge">{{element.id}}</span>{{element.name}}-->
+  <!--</li>-->
+<!--</ul>-->
 
 
-<div *ngIf="selectedHero">
+<!--<div *ngIf="selectedHero">-->
 
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedHero.name" placeholder="name">
-    </label>
-  </div>
-</div>
-
-<app-app-hero-detail [hero]="selectedHero"></app-app-hero-detail>
+  <!--<h2>{{ selectedHero.name | uppercase }} Details</h2>-->
+  <!--<div><span>id: </span>{{selectedHero.id}}</div>-->
+  <!--<div>-->
+    <!--<label>name:-->
+      <!--<input [(ngModel)]="selectedHero.name" placeholder="name">-->
+    <!--</label>-->
+  <!--</div>-->
+<!--</div>-->
 
 
 
@@ -48,9 +43,17 @@
     <mat-card-title fxLayout.xs="column" fxLayoutGap="5px">
       <span fxFlex="80%">{{picture.caption}}</span>
       <mat-icon fxFlex="10%">mode_edit</mat-icon>
-      <mat-icon fxFlex="10%">delete</mat-icon>
+      <mat-icon fxFlex="10%" (click)="onSelect(picture)" style="cursor: pointer">delete</mat-icon>
     </mat-card-title>
     <img mat-card-image src={{picture.img}}>
     <!--<img mat-card-image [src]="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">-->
   </mat-card >
 </div>
+
+<div>
+  <span>ID : {{selectedHero.id}}</span>
+</div>
+
+<!--<button (click)="onClick()">click</button>-->
+
+<app-app-hero-detail [hero]="selectedHero"></app-app-hero-detail>
