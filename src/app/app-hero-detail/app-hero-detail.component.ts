@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+
+
 
 @Component({
   selector: 'app-app-hero-detail',
@@ -7,11 +9,24 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AppHeroDetailComponent implements OnInit {
 
-  @Input() hero: any;
+  @Input() hero: any; @Output() notify: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() { }
+  data = [
+    {id: 100, name: 'new_name'}
+  ]
+
+  constructor() {}
 
   ngOnInit() {
+  }
+
+
+  editData() {
+    this.notify.emit(this.data);
+  }
+
+  changeComp() {
+    alert('routing');
   }
 
 }

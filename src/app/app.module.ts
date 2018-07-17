@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './/app-routing.module';
+// import { AppRoutingModule } from './/app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -17,6 +18,33 @@ import { FlexLayoutComponent } from './flex-layout/flex-layout.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MockServiceComponent } from './mock-service/mock-service.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AppComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'flex',
+    component: FlexLayoutComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'list',
+    component: ListComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'parent',
+    component: ParentComponent,
+    pathMatch: 'full'
+  }
+];
+
 
 @NgModule({
   declarations: [
@@ -27,12 +55,15 @@ import { MockServiceComponent } from './mock-service/mock-service.component';
     AppHeroDetailComponent,
     FlexLayoutComponent,
     ReactiveFormComponent,
-    MockServiceComponent
+    MockServiceComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
+    // AppRoutingModule,
+    RouterModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
@@ -42,9 +73,20 @@ import { MockServiceComponent } from './mock-service/mock-service.component';
     MatInputModule,
     MatAutocompleteModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(
+      routes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
+  ],
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
+
+
+
+
 export class AppModule { }

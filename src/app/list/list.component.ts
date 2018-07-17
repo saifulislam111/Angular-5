@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {heroes} from '../data-model';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
 
@@ -25,10 +26,7 @@ export class ListComponent implements OnInit {
     {name: 'Gugly', id: 3},
     {name: 'NJ', id: 4}
   ];
-
-  data = {
-    imageID: 10
-  }
+  data = heroes;
 
   pictures = [
   {id: 1, caption: '1st image', img: 'https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg'},
@@ -44,7 +42,6 @@ export class ListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
   }
 
 
@@ -52,6 +49,11 @@ export class ListComponent implements OnInit {
 
     this.selectedHero = element;
 
+  }
+
+  onNotify(message:any):void {
+    // alert(message);
+    this.data = message;
   }
 
 

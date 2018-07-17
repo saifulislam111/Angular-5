@@ -1,11 +1,11 @@
-<!--<p>list of arrays:</p>-->
-<!--<ul>-->
-  <!--<li *ngFor="let element of list"-->
-      <!--[class.selected]="element === selectedHero"-->
-      <!--(click)="onSelect(element)">-->
-    <!--<span class="badge">{{element.id}}</span>{{element.name}}-->
-  <!--</li>-->
-<!--</ul>-->
+<p>list of arrays:</p>
+<ul>
+  <li *ngFor="let element of data"
+      [class.selected]="element === selectedHero"
+      (click)="onSelect(element)">
+    <span class="badge">{{element.id}}</span>{{element.name}}
+  </li>
+</ul>
 
 
 <!--<div *ngIf="selectedHero">-->
@@ -56,4 +56,4 @@
 
 <!--<button (click)="onClick()">click</button>-->
 
-<app-app-hero-detail [hero]="selectedHero"></app-app-hero-detail>
+<app-app-hero-detail [hero]="selectedHero" (notify)="onNotify($event)"></app-app-hero-detail>

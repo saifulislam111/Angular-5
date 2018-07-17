@@ -1,0 +1,21 @@
+<div class="container">
+  <h4>
+    child component!
+  </h4>
+</div>
+
+
+<div class="container">
+  <mat-card *ngFor="let person of parent">
+    <mat-card-header *ngIf="person.id" fxLayout="row" fxLayoutGap="10px">
+      <span fxFlex="20%">ID :{{person.id}}</span>
+      <span fxFlex="70%">Name :{{person.name}}</span>
+      <mat-icon fxFlex="5%" style="cursor: pointer">edit</mat-icon>
+      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="deleteData()">delete</mat-icon>
+    </mat-card-header>
+    <span class="container">{{person.address}}</span>
+  </mat-card>
+  <div style="float: right">
+    <button mat-raised-button (click)="addData()">Add New Data</button>
+  </div>
+</div>
