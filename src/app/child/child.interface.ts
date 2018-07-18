@@ -1,4 +1,5 @@
 
 export interface ChildInterface {
-  addData();
+  addData(any);
+  deleteData(any);
 }

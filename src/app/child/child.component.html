@@ -4,18 +4,55 @@
   </h4>
 </div>
 
-
-<div class="container">
+<div *ngIf="!deleted_person">
+<div class="container" *ngIf="!add_new_person">
   <mat-card *ngFor="let person of parent">
     <mat-card-header *ngIf="person.id" fxLayout="row" fxLayoutGap="10px">
       <span fxFlex="20%">ID :{{person.id}}</span>
       <span fxFlex="70%">Name :{{person.name}}</span>
-      <mat-icon fxFlex="5%" style="cursor: pointer">edit</mat-icon>
-      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="deleteData()">delete</mat-icon>
+      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="editData(person)">edit</mat-icon>
+      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="deleteData(person)">delete</mat-icon>
     </mat-card-header>
     <span class="container">{{person.address}}</span>
   </mat-card>
-  <div style="float: right">
-    <button mat-raised-button (click)="addData()">Add New Data</button>
-  </div>
+</div>
+
+<div class="container" *ngIf="add_new_person">
+  <mat-card *ngFor="let person of new_person">
+    <mat-card-header *ngIf="person.id" fxLayout="row" fxLayoutGap="10px">
+      <span fxFlex="20%">ID :{{person.id}}</span>
+      <span fxFlex="70%">Name :{{person.name}}</span>
+      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="editData(person)">edit</mat-icon>
+      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="deleteData(person)">delete</mat-icon>
+    </mat-card-header>
+    <span class="container">{{person.address}}</span>
+  </mat-card>
+</div>
+</div>
+
+<div *ngIf="deleted_person">
+<div class="container">
+  <h2>New table after delete</h2>
+  <mat-card *ngFor="let person of new_person_deleted">
+    <mat-card-header *ngIf="person.id" fxLayout="row" fxLayoutGap="10px">
+      <span fxFlex="20%">ID :{{person.id}}</span>
+      <span fxFlex="70%">Name :{{person.name}}</span>
+      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="editData(person)">edit</mat-icon>
+      <mat-icon fxFlex="5%" style="cursor: pointer" (click)="deleteData(person)">delete</mat-icon>
+    </mat-card-header>
+    <span class="container">{{person.address}}</span>
+  </mat-card>
+</div>
+</div>
+
+<div class="container">
+  <button mat-raised-button (click)="addDataFromform()">Add New Data</button>
+</div>
+<br>
+<div class="container" *ngIf="open_form">
+  <input [formControl]="id" placeholder="ID">
+  <input [formControl]="name" placeholder="Name">
+  <input [formControl]="address" placeholder="Location">
+  <button (click)="saveForm()">Save</button>
+  <button (click)="closeForm()">Cancel</button>
 </div>

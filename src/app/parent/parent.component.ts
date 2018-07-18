@@ -9,9 +9,7 @@ import {ParentService} from './parent.service';
 })
 export class ParentComponent implements OnInit {
 
-  persons: any;
   local: any;
-  result: any;
   new_person: any = [];
 
   constructor(private parentService: ParentService ) { }
@@ -41,9 +39,8 @@ export class ParentComponent implements OnInit {
   }
 
   deleteData() {
-
     this.parentService.addData();
-
   }
+
 
 }

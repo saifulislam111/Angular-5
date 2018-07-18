@@ -20,6 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MockServiceComponent } from './mock-service/mock-service.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import {ChildInterface} from './child/child.interface';
+import {ParentService} from './parent/parent.service';
 
 
 const routes: Routes = [
@@ -74,14 +76,15 @@ const routes: Routes = [
     MatAutocompleteModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(
-      routes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    RouterModule.forRoot(routes)
   ],
 
+  providers: [
+    {
+      provide: 'ChildInterface',
+      useClass: ParentService
+    }
   ],
-  providers: [],
   bootstrap: [AppComponent],
 
 })
