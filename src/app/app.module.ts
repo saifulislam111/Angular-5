@@ -22,6 +22,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import {ChildInterface} from './child/child.interface';
 import {ParentService} from './parent/parent.service';
+import { TestComponent } from './test/test.component';
+import { ObservableComponent } from './observable/observable.component';
 
 
 const routes: Routes = [
@@ -59,7 +61,9 @@ const routes: Routes = [
     ReactiveFormComponent,
     MockServiceComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    TestComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,

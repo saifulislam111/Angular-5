@@ -39,7 +39,6 @@ export class ParentComponent implements OnInit {
   }
 
   deleteData() {
-    this.parentService.addData();
   }
 
 
